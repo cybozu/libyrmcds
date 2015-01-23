@@ -267,8 +267,8 @@ yrmcds_cnt_recv(yrmcds_cnt* c, yrmcds_cnt_response* r) {
 
 static yrmcds_error
 send_command(yrmcds_cnt* c, yrmcds_cnt_command cmd, uint32_t* serial,
-             uint32_t body1_len, const char* body1,
-             uint32_t body2_len, const char* body2) {
+             size_t body1_len, const char* body1,
+             size_t body2_len, const char* body2) {
     if( c == NULL ||
         body1_len > UINT32_MAX - body2_len ||
         (body1_len != 0 && body1 == NULL) ||
@@ -290,7 +290,7 @@ send_command(yrmcds_cnt* c, yrmcds_cnt_command cmd, uint32_t* serial,
     header[1] = (uint8_t)cmd;
     header[2] = 0;
     header[3] = 0;
-    hton32(body1_len + body2_len, header + 4);
+    hton32((uint32_t)(body1_len + body2_len), header + 4);
     memcpy(header + 8, &c->serial, 4);
 
     yrmcds_error ret = YRMCDS_OK;
@@ -314,7 +314,7 @@ send_command(yrmcds_cnt* c, yrmcds_cnt_command cmd, uint32_t* serial,
 
     size_t i;
     for( i = 0; i < iovcnt; ) {
-        ssize_t n = writev(c->sock, iov + i, iovcnt - i);
+        ssize_t n = writev(c->sock, iov + i, (int)(iovcnt - i));
         if( n == -1 ) {
             if( errno == EINTR ) continue;
             ret = YRMCDS_SYSTEM_ERROR;

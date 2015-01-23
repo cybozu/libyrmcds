@@ -47,7 +47,7 @@ static yrmcds_error send_command(
     h[1] = (char)cmd;
     hton16((uint16_t)key_len, &h[2]);
     h[4] = (char)extras_len;
-    uint32_t total_len = key_len + extras_len + data_len;
+    uint32_t total_len = (uint32_t)(key_len + extras_len + data_len);
     hton32(total_len, &h[8]);
     hton64(cas, &h[16]);
 
