@@ -34,7 +34,7 @@ static yrmcds_error send_command(
     size_t key_len, const char* key,
     size_t extras_len, const char* extras,
     size_t data_len, const char* data) {
-    if( cmd < 0 || cmd >= YRMCDS_CMD_BOTTOM ||
+    if( cmd >= YRMCDS_CMD_BOTTOM ||
         key_len > 65535 || extras_len > 127 || data_len > MAX_DATA_SIZE ||
         (key_len != 0 && key == NULL) ||
         (extras_len != 0 && extras == NULL) ||
@@ -47,7 +47,7 @@ static yrmcds_error send_command(
     h[1] = (char)cmd;
     hton16((uint16_t)key_len, &h[2]);
     h[4] = (char)extras_len;
-    uint32_t total_len = key_len + extras_len + data_len;
+    uint32_t total_len = (uint32_t)(key_len + extras_len + data_len);
     hton32(total_len, &h[8]);
     hton64(cas, &h[16]);
 
