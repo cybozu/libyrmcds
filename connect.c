@@ -35,8 +35,11 @@ static yrmcds_error connect_to_server(const char* node, uint16_t port, int* serv
     hint.ai_flags = AI_NUMERICSERV|AI_ADDRCONFIG;
     int e = getaddrinfo(node, sport, &hint, &res);
     if( e == EAI_FAMILY || e == EAI_NONAME
-#ifdef _GNU_SOURCE
-        || e == EAI_ADDRFAMILY || e == EAI_NODATA
+#ifdef EAI_ADDRFAMILY
+        || e == EAI_ADDRFAMILY
+#endif
+#ifdef EAI_NODATA
+        || e == EAI_NODATA
 #endif
         ) {
         hint.ai_family = AF_INET6;
