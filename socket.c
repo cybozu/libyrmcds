@@ -6,6 +6,15 @@
 #include <sys/types.h>
 #include <sys/time.h>
 
+yrmcds_error yrmcds_shutdown(yrmcds* c) {
+    if( c == NULL )
+        return YRMCDS_BAD_ARGUMENT;
+    if( shutdown(c->sock, SHUT_RD) == -1 ) {
+        return YRMCDS_SYSTEM_ERROR;
+    }
+    return YRMCDS_OK;
+}
+
 int yrmcds_fileno(yrmcds* c) {
     return c->sock;
 }

@@ -101,6 +101,10 @@ void async_recv(yrmcds* c, void (*notify)(uint32_t, yrmcds_response* r)) {
 }
 ```
 
+You can use `yrmcds_shutdown()` to interrupt the thread blocking in
+`yrmcds_recv()` for graceful exit.
+
+
 Transparent compression
 -----------------------
 

@@ -192,6 +192,21 @@ yrmcds_error yrmcds_close(yrmcds* c);
 
 
 /**
+ * Shutdown the receiving end of the socket.
+ * @param  c     A pointer to ::yrmcds.
+ * @return 0 if \p c is valid.  Other values indicate an error.
+ *
+ * This function simply calls \p shutdown system call with \p SHUT_RD .
+ * This can be used to interrupt a thread waiting in ::yrmcds_recv.
+ *
+ * Note that interrupted ::yrmcds_recv will return ::YRMCDS_DISCONNECTED.
+ *
+ * \see https://github.com/cybozu/libyrmcds/issues/8
+ */
+yrmcds_error yrmcds_shutdown(yrmcds* c);
+
+
+/**
  * Enable/disable (de)compression for large objects.
  * @param  c     A pointer to ::yrmcds.
  * @param  threshold  The threshold for compression.
@@ -239,8 +254,11 @@ yrmcds_error yrmcds_set_timeout(yrmcds* c, int timeout);
  * this function, though command sending functions can be used in parallel.
  *
  * The response data stored in \p r keep valid until the next call of this
- * function or until yrmcds_close() is called.  \p r can be reused for the
- * next call of yrmcds_recv().
+ * function or until ::yrmcds_close is called.  \p r can be reused for the
+ * next call of ::yrmcds_recv.
+ *
+ * This will return ::YRMCDS_DISCONNECTED when the socket is closed or
+ * ::yrmcds_shutdown is called from another thread.
  */
 yrmcds_error yrmcds_recv(yrmcds* c, yrmcds_response* r);
 
