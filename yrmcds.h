@@ -881,6 +881,21 @@ yrmcds_error
 yrmcds_cnt_close(yrmcds_cnt* c);
 
 /**
+ * Shutdown the receiving end of the socket.
+ * @param  c     A pointer to ::yrmcds_cnt.
+ * @return 0 if \p c is valid.  Other values indicate an error.
+ *
+ * This function simply calls \p shutdown system call with \p SHUT_RD .
+ * This can be used to interrupt a thread waiting in ::yrmcds_cnt_recv.
+ *
+ * Note that interrupted ::yrmcds_cnt_recv will return ::YRMCDS_DISCONNECTED.
+ *
+ * \see https://github.com/cybozu/libyrmcds/issues/8
+ */
+yrmcds_error
+yrmcds_cnt_shutdown(yrmcds_cnt* c);
+
+/**
  * Return the underlying socket in ::yrmcds_cnt.
  * @param  c     A pointer to ::yrmcds_cnt.
  * @return       A UNIX file descriptor of a socket.
