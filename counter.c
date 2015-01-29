@@ -78,6 +78,15 @@ yrmcds_cnt_close(yrmcds_cnt* c) {
     return YRMCDS_OK;
 }
 
+yrmcds_error
+yrmcds_cnt_shutdown(yrmcds_cnt* c) {
+    if( c == NULL )
+        return YRMCDS_BAD_ARGUMENT;
+    if( shutdown(c->sock, SHUT_RD) == -1 )
+        return YRMCDS_SYSTEM_ERROR;
+    return YRMCDS_OK;
+}
+
 int
 yrmcds_cnt_fileno(yrmcds_cnt* c) {
     return c->sock;
