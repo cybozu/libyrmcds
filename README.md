@@ -65,6 +65,7 @@ Authors & Contributors
 * Nojima, Yusuke [@nojima](https://github.com/nojima)
 * Tanuma, Shuhei [@chobie](https://github.com/chobie)
 * Oku, Kazuho [@kazuho](https://github.com/kazuho)
+* Fazal Majid [@fazalmajid](https://github.com/fazalmajid)
 
 [memcached]: http://memcached.org/
 [yrmcds]: http://cybozu.github.io/yrmcds/
