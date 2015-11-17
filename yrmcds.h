@@ -108,6 +108,8 @@ typedef enum {
     YRMCDS_CMD_RAU        = '\x4a',
     YRMCDS_CMD_RAUQ       = '\x4b',
 
+    YRMCDS_CMD_KEYS       = '\x50',
+
     YRMCDS_CMD_BOTTOM     // place this at the bottom.
 } yrmcds_command;
 
@@ -747,6 +749,19 @@ yrmcds_error yrmcds_stat_items(yrmcds* c, uint32_t* serial);
  * @return 0 if succeeded.  Other values indicate an error.
  */
 yrmcds_error yrmcds_stat_sizes(yrmcds* c, uint32_t* serial);
+
+
+/**
+ * Send Keys command to list all keys matching the given prefix.
+ * To retrieve all keys, pass \p NULL and 0 as \p prefix and \p prefix_len.
+ * @param  c          A pointer to ::yrmcds.
+ * @param  prefix     Prefix data.
+ * @param  prefix_len Length of \p prefix.
+ * @param  serial     A pointer to \p uint32_t, or \p NULL.
+ * @return 0 if succeeded.  Other values indicate an error.
+ */
+yrmcds_error yrmcds_keys(yrmcds* c, const char* prefix, size_t prefix_len,
+                         uint32_t* serial);
 
 
 /**

@@ -84,6 +84,8 @@ static void usage() {
            "          flush all unlocked items immediately or after DELAY seconds.\n"
            "  stat [settings|items|sizes]\n"
            "          obtain general or specified statistics.\n"
+           "  keys [PREFIX]\n"
+           "          dump keys matching PREFIX.\n"
            "  version\n"
            "          shows the server version.\n"
            "  quit\n"
@@ -925,6 +927,34 @@ int cmd_stat(int argc, char** argv, yrmcds* s) {
     return 0;
 }
 
+int cmd_keys(int argc, char** argv, yrmcds* s) {
+    const char* prefix = NULL;
+    size_t prefix_len = 0;
+    if( argc == 1 ) {
+        prefix = argv[0];
+        prefix_len = strlen(prefix);
+    }
+    yrmcds_response r[1];
+    uint32_t serial;
+    yrmcds_error e = yrmcds_keys(s, prefix, prefix_len, &serial);
+    CHECK_ERROR(e);
+    if( debug )
+        fprintf(stderr, "request serial = %u\n", serial);
+    while( 1 ) {
+        e = yrmcds_recv(s, r);
+        CHECK_ERROR(e);
+        if( debug )
+            print_response(r);
+        CHECK_RESPONSE(r);
+        if( r->serial != serial )
+            continue;
+        if( r->key_len == 0 )
+            break;
+        printf("%.*s\n", (int)r->key_len, r->key);
+    }
+    return 0;
+}
+
 int cmd_version(int argc, char** argv, yrmcds* s) {
     yrmcds_response r[1];
     uint32_t serial;
@@ -1049,6 +1079,7 @@ int main(int argc, char** argv) {
     do_cmd(unlockall);
     do_cmd(flush);
     do_cmd(stat);
+    do_cmd(keys);
     do_cmd(version);
     do_cmd(quit);
 

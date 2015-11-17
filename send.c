@@ -440,6 +440,17 @@ yrmcds_error yrmcds_stat_sizes(yrmcds* c, uint32_t* serial) {
                         0, serial, sizeof(key) - 1, key, 0, NULL, 0, NULL);
 }
 
+yrmcds_error yrmcds_keys(yrmcds* c, const char* prefix, size_t prefix_len,
+                         uint32_t* serial) {
+    if( c == NULL ||
+        (prefix == NULL && prefix_len != 0) ||
+        (prefix != NULL && prefix_len == 0) )
+        return YRMCDS_BAD_ARGUMENT;
+
+    return send_command(c, YRMCDS_CMD_KEYS,
+                        0, serial, prefix_len, prefix, 0, NULL, 0, NULL);
+}
+
 yrmcds_error yrmcds_version(yrmcds* c, uint32_t* serial) {
     if( c == NULL )
         return YRMCDS_BAD_ARGUMENT;
