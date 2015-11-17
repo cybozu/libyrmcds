@@ -1,7 +1,7 @@
 // (C) 2013-2015 Cybozu et al.
 
 #include "yrmcds.h"
-#include "portability.h"
+#include "yrmcds_portability.h"
 
 #ifdef LIBYRMCDS_USE_LZ4
 #  include "lz4/lib/lz4.h"
