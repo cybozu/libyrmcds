@@ -1,4 +1,4 @@
-/** @file portability.h
+/** @file yrmcds_portability.h
  *
  * Private header file for OS portability.
  *
