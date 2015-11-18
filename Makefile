@@ -30,8 +30,12 @@ all: lib $(EXE)
 lib: $(LIB)
 
 # LZ4 is optional.  Run "make lz4; make" to build LZ4 enabled library.
+LZ4_TAG = r127
+WGET = wget -q -P lz4/lib
 lz4:
-	svn checkout -r 127 http://lz4.googlecode.com/svn/trunk/ lz4
+	mkdir -p lz4/lib
+	$(WGET) https://raw.githubusercontent.com/Cyan4973/lz4/$(LZ4_TAG)/lib/lz4.c
+	$(WGET) https://raw.githubusercontent.com/Cyan4973/lz4/$(LZ4_TAG)/lib/lz4.h
 
 ifeq ($(wildcard lz4), lz4)
 $(info LZ4 transparent compression is *enabled*)
