@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>libyrmcds by cybozu</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/cybozu/libyrmcds">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/cybozu/libyrmcds/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/cybozu/libyrmcds/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>libyrmcds</h1>
+          <p>A memcached client library for C/C++.  Best suited to yrmcds.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/cybozu">cybozu</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p>libyrmcds is a <a href="http://memcached.org/">memcached</a> client library written in C.<br>
+This is a companion to <a href="http://cybozu.github.io/yrmcds/">yrmcds</a>, a memcached compatible KVS.</p>
+
+<p>In addition to the library itself, a client program called <code>yc</code> is included.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>
+<p>Minimalistic.</p>
+
+<p>libyrmcds does <em>not</em> provide any rich features like consistent hashing.
+Instead, it can be used as a base library to implement such rich
+features.</p>
+</li>
+<li>
+<p>Only the binary protocol is supported.</p>
+
+<p>By supporting only the latest <a href="https://code.google.com/p/memcached/wiki/BinaryProtocolRevamped">binary protocol</a>, libyrmcds
+provides full access to the every aspect of the protocol.</p>
+</li>
+<li>
+<p>Support for <a href="http://cybozu.github.io/yrmcds/">yrmcds</a> extensions.</p>
+
+<p>Specifically, <a href="https://github.com/cybozu/yrmcds/blob/master/docs/locking.md">the server-side locking</a> and <a href="https://github.com/cybozu/yrmcds/blob/master/docs/counter.md">the counter extension</a> is supported.</p>
+</li>
+<li>
+<p>Separated send / recv operations.</p>
+
+<p>Although the socket used in libyrmcds is blocking, receiving results
+from the server is separated from the sending operations.  You can
+even use a different thread to receive results asynchronously.</p>
+</li>
+<li>
+<p>Optional compression with <a href="https://code.google.com/p/lz4/">LZ4</a>.</p>
+
+<p>Large objects can be transparently compressed/uncompressed with
+<a href="https://code.google.com/p/lz4/">LZ4</a> compression algorithm.</p>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This library is licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">the BSD 2-clause license</a>.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-42201828-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
