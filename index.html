@@ -4,40 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>libyrmcds by cybozu</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/cybozu/libyrmcds">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/cybozu/libyrmcds/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/cybozu/libyrmcds/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
     <div class="wrapper">
-
+      <header>
+        <h1>libyrmcds</h1>
+        <p>A memcached client library for C/C++.  Best suited to yrmcds.</p>
+        <p class="view"><a href="https://github.com/cybozu/libyrmcds">View the Project on GitHub <small>cybozu/libyrmcds</small></a></p>
+        <ul>
+          <li><a href="https://github.com/cybozu/libyrmcds/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cybozu/libyrmcds/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cybozu/libyrmcds">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
       <section>
-        <div id="title">
-          <h1>libyrmcds</h1>
-          <p>A memcached client library for C/C++.  Best suited to yrmcds.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/cybozu">cybozu</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
         <p>libyrmcds is a <a href="http://memcached.org/">memcached</a> client library written in C.<br>
 This is a companion to <a href="http://cybozu.github.io/yrmcds/">yrmcds</a>, a memcached compatible KVS.</p>
 
@@ -73,11 +62,19 @@ from the server is separated from the sending operations.  You can
 even use a different thread to receive results asynchronously.</p>
 </li>
 <li>
-<p>Optional compression with <a href="https://code.google.com/p/lz4/">LZ4</a>.</p>
+<p>Optional compression with <a href="https://github.com/Cyan4973/lz4">LZ4</a>.</p>
 
 <p>Large objects can be transparently compressed/uncompressed with
-<a href="https://code.google.com/p/lz4/">LZ4</a> compression algorithm.</p>
+<a href="https://github.com/Cyan4973/lz4">LZ4</a> compression algorithm.</p>
 </li>
+</ul>
+
+<h2>
+<a id="documents" class="anchor" href="#documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h2>
+
+<ul>
+<li><a href="https://github.com/cybozu/libyrmcds/blob/master/USAGE.md">Usage</a></li>
+<li><a href="html/">API</a></li>
 </ul>
 
 <h2>
@@ -85,8 +82,11 @@ even use a different thread to receive results asynchronously.</p>
 
 <p>This library is licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">the BSD 2-clause license</a>.</p>
       </section>
-
     </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/cybozu">cybozu</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
