@@ -25,6 +25,8 @@ CHEADERS = $(wildcard *.h)
 CSOURCES = $(wildcard *.c)
 COBJECTS = $(patsubst %.c,%.o,$(CSOURCES))
 LIB_OBJECTS = $(filter-out yc.o yc-cnt.o,$(COBJECTS))
+TEST_SOURCES = $(wildcard t/*.c)
+TESTS = $(patsubst %.c,%,$(TEST_SOURCES))
 
 all: lib $(EXE)
 lib: $(LIB)
@@ -58,6 +60,17 @@ $(EXE): $(LIB)
 $(LIB): $(LIB_OBJECTS)
 	$(AR) rcs $@ $^
 
+t/%.exe: t/%.c $(LIB)
+	$(CC) -I$(shell pwd) $(CFLAGS) $(LDFLAGS) -o $@ $< $(LDLIBS)
+
+$(TESTS): $(LIB)
+	@$(MAKE) -s $@.exe
+	@echo Running ./$@.exe
+	@./$@.exe
+	@echo
+
+test: $(TESTS)
+
 html:
 	rm -rf html
 	doxygen
@@ -66,9 +79,9 @@ serve: html
 	@cd html; python -m SimpleHTTPServer 8888 || true
 
 clean:
-	rm -rf *.o html $(EXE) $(LIB)
+	rm -rf *.o t/*.exe html $(EXE) $(LIB)
 
 setup:
 	sudo apt-get install -y $(PACKAGES)
 
-.PHONY: all lib tests install html serve clean setup
+.PHONY: all lib test html serve clean setup
