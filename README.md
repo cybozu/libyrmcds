@@ -15,10 +15,11 @@ Features
     Instead, it can be used as a base library to implement such rich
     features.
 
-* Only the binary protocol is supported.
+* Designed for binary protocol.
 
-    By supporting only the latest [binary protocol][binprot], libyrmcds
-    provides full access to the every aspect of the protocol.
+    In order to access the true power of the binary protocol, libyrmcds
+    is designed primarily for binary protocol.  Limited support for the
+    text protocol is provided, though.
 
 * Support for [yrmcds][] extensions.
 
