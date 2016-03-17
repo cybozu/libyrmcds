@@ -3,7 +3,6 @@
 #include "yrmcds.h"
 
 #include <errno.h>
-#include <error.h>
 #include <fcntl.h>
 #include <inttypes.h>
 #include <stdio.h>
@@ -170,7 +169,7 @@ static size_t read_data(const char* filename, char** pdata) {
 #define CHECK_ERROR(e)                                                  \
     if( e != 0 ) {                                                      \
         if( e == YRMCDS_SYSTEM_ERROR ) {                                \
-            error(0, errno, "system error");                            \
+            fprintf(stderr, "system error: %s\n", strerror(errno));     \
         } else {                                                        \
             fprintf(stderr, "yrmcds error: %s\n", yrmcds_strerror(e));  \
         }                                                               \

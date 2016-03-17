@@ -20,11 +20,13 @@
 #define EXPAND_STR(s) (s), (sizeof(s) - 1)
 static const char CRLF[2] = {'\r', '\n'};
 
+#ifdef LIBYRMCDS_USE_LZ4
 static inline void
 hton32(uint32_t i, char* p) {
     uint32_t n = htobe32(i);
     memcpy(p, &n, sizeof(n));
 }
+#endif
 
 static inline yrmcds_error
 check_key(const char* key, size_t key_len) {

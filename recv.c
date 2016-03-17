@@ -181,8 +181,6 @@ yrmcds_error yrmcds_recv(yrmcds* c, yrmcds_response* r) {
 
 
 // text protocol
-static const char CRLF[2] = {'\r', '\n'};
-
 #define PARSE_UINT(name)                        \
     uint64_t name = 0;                          \
     while( *p == ' ' ) p++;                     \

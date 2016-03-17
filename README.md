@@ -1,6 +1,8 @@
 libyrmcds
 =========
 
+[![Build Status](https://travis-ci.org/cybozu/libyrmcds.png)](https://travis-ci.org/cybozu/libyrmcds)
+
 libyrmcds is a [memcached][] client library written in C.  
 This is a companion to [yrmcds][], a memcached compatible KVS.
 
