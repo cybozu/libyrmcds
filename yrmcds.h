@@ -8,7 +8,10 @@
 #ifndef YRMCDS_H_INCLUDED
 #define YRMCDS_H_INCLUDED
 
+/// Library version string such as "1.2.1".
 #define LIBYRMCDS_VERSION        "1.2.1"
+
+/// Library version number such as 10201.
 #define LIBYRMCDS_VERSION_NUMBER  10201
 
 #include <pthread.h>
@@ -59,6 +62,8 @@ typedef enum {
     YRMCDS_STATUS_NOTLOCKED = 0x0011,
     YRMCDS_STATUS_UNKNOWNCOMMAND = 0x0081,
     YRMCDS_STATUS_OUTOFMEMORY = 0x0082,
+
+    YRMCDS_STATUS_OTHER = 0xffff,    ///< unknown error in text protocol.
 } yrmcds_status;
 
 
@@ -836,7 +841,7 @@ typedef struct {
  */
 typedef struct {
     pthread_mutex_t lock;        ///< guard lock to serialize sends.
-    yrmcds_cnt_statistics stats; /// the result of `stats` command.
+    yrmcds_cnt_statistics stats; ///< the result of `stats` command.
     char* recvbuf;               ///< received data buffer.
     size_t capacity;             ///< buffer capacity.
     size_t used;                 ///< used bytes.
