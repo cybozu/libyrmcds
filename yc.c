@@ -23,11 +23,12 @@ static void version() {
 
 static void usage() {
     printf("Usage: yc "
-           "[-h] [-v] [-d] [-s SERVER] [-p PORT] [-c COMPRESS] COMMAND ...\n\n"
+           "[-h] [-v] [-d] [-t] [-s SERVER] [-p PORT] [-c COMPRESS] COMMAND ...\n\n"
            "Options:\n"
            "  -h      print help and exit.\n"
            "  -v      print version information.\n"
            "  -d      turn on debug messages.\n"
+           "  -t      turn on text protocol mode.\n"
            "  -q      Use quiet commands, if possible.\n"
            "  -s      connect to SERVER.      Default: localhost\n"
            "  -p      TCP port number.        Default: 11211\n"
@@ -990,10 +991,11 @@ int main(int argc, char** argv) {
     const char* server = DEFAULT_SERVER;
     uint16_t port = DEFAULT_PORT;
     size_t compression = DEFAULT_COMPRESS;
+    int text_mode = 0;
 
     while( 1 ) {
         int n;
-        int c = getopt(argc, argv, "s:p:c:dqvh");
+        int c = getopt(argc, argv, "s:p:c:dtqvh");
         if( c == -1 ) break;
         switch( c ) {
         case 's':
@@ -1017,6 +1019,9 @@ int main(int argc, char** argv) {
             break;
         case 'd':
             debug = 1;
+            break;
+        case 't':
+            text_mode = 1;
             break;
         case 'q':
             quiet = 1;
@@ -1044,6 +1049,10 @@ int main(int argc, char** argv) {
     yrmcds s[1];
     yrmcds_error e = yrmcds_connect(s, server, port);
     CHECK_ERROR(e);
+    if( text_mode ) {
+        e = yrmcds_text_mode(s);
+        CHECK_ERROR(e);
+    }
     e = yrmcds_set_compression(s, compression);
     if( e != 0 && e != YRMCDS_NOT_IMPLEMENTED ) {
         yrmcds_close(s);
