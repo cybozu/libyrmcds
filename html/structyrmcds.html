@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -137,6 +136,14 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyrmcds_af470f657843b11e3179936edec3694f1.html#af470f657843b11e3179936edec3694f1">invalid</a></td></tr>
 <tr class="memdesc:af470f657843b11e3179936edec3694f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">invalid flag. <br/></td></tr>
 <tr class="separator:af470f657843b11e3179936edec3694f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4facd0b31dcc58fff4b404a397cab26c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4facd0b31dcc58fff4b404a397cab26c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyrmcds_a4facd0b31dcc58fff4b404a397cab26c.html#a4facd0b31dcc58fff4b404a397cab26c">text_mode</a></td></tr>
+<tr class="memdesc:a4facd0b31dcc58fff4b404a397cab26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">text mode flag. <br/></td></tr>
+<tr class="separator:a4facd0b31dcc58fff4b404a397cab26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d31b62787b17be2c9453a2a3dfd1ff4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d31b62787b17be2c9453a2a3dfd1ff4"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structyrmcds_a6d31b62787b17be2c9453a2a3dfd1ff4.html#a6d31b62787b17be2c9453a2a3dfd1ff4">rserial</a></td></tr>
+<tr class="memdesc:a6d31b62787b17be2c9453a2a3dfd1ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">serial emulation. <br/></td></tr>
+<tr class="separator:a6d31b62787b17be2c9453a2a3dfd1ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structure of a connection to memcached/yrmcds server. </p>
@@ -146,7 +153,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 17 2016 19:30:37 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 18 2016 19:10:47 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

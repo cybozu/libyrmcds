@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -125,10 +124,12 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>YRMCDS_H_INCLUDED</b></td></tr>
 <tr class="separator:a7bd7023c9ccbc41a049bd5a41a54414e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a111fff2f5fc1fcb9ba134ede1faa4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a111fff2f5fc1fcb9ba134ede1faa4d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LIBYRMCDS_VERSION</b>&#160;&#160;&#160;&quot;1.2.1&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="yrmcds_8h_a8a111fff2f5fc1fcb9ba134ede1faa4d.html#a8a111fff2f5fc1fcb9ba134ede1faa4d">LIBYRMCDS_VERSION</a>&#160;&#160;&#160;&quot;1.3.0&quot;</td></tr>
+<tr class="memdesc:a8a111fff2f5fc1fcb9ba134ede1faa4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library version string such as "1.3.0". <br/></td></tr>
 <tr class="separator:a8a111fff2f5fc1fcb9ba134ede1faa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74de5f21b4ad84743784f58505a0fad5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74de5f21b4ad84743784f58505a0fad5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LIBYRMCDS_VERSION_NUMBER</b>&#160;&#160;&#160;10201</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="yrmcds_8h_a74de5f21b4ad84743784f58505a0fad5.html#a74de5f21b4ad84743784f58505a0fad5">LIBYRMCDS_VERSION_NUMBER</a>&#160;&#160;&#160;10300</td></tr>
+<tr class="memdesc:a74de5f21b4ad84743784f58505a0fad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library version number such as 10201. <br/></td></tr>
 <tr class="separator:a74de5f21b4ad84743784f58505a0fad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -146,10 +147,11 @@ Enumerations</h2></td></tr>
 <br/>
 &#160;&#160;<b>YRMCDS_STATUS_NOTLOCKED</b> = 0x0011, 
 <b>YRMCDS_STATUS_UNKNOWNCOMMAND</b> = 0x0081, 
-<b>YRMCDS_STATUS_OUTOFMEMORY</b> = 0x0082
+<b>YRMCDS_STATUS_OUTOFMEMORY</b> = 0x0082, 
+<a class="el" href="yrmcds_8h_a077347146f4fdc68467fdc073fb266d4.html#a077347146f4fdc68467fdc073fb266d4aa4b98e2803587a296ee3d15720489180">YRMCDS_STATUS_OTHER</a> = 0xffff
 <br/>
  }</td></tr>
-<tr class="memdesc:a077347146f4fdc68467fdc073fb266d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server status codes. <br/></td></tr>
+<tr class="memdesc:a077347146f4fdc68467fdc073fb266d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server status codes.  <a href="yrmcds_8h_a077347146f4fdc68467fdc073fb266d4.html#a077347146f4fdc68467fdc073fb266d4">More...</a><br/></td></tr>
 <tr class="separator:a077347146f4fdc68467fdc073fb266d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6755e16c035e41400254d1294e7c7077"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="yrmcds_8h_a6755e16c035e41400254d1294e7c7077.html#a6755e16c035e41400254d1294e7c7077">yrmcds_command</a> { <br/>
 &#160;&#160;<b>YRMCDS_CMD_GET</b> = '\x00', 
@@ -225,7 +227,9 @@ Enumerations</h2></td></tr>
 <a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a9785c0f8a104d9da0796860e3c663b40">YRMCDS_COMPRESS_FAILED</a>, 
 <br/>
 &#160;&#160;<a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a7f50eeb2e569061c895a88bdfea884c7">YRMCDS_PROTOCOL_ERROR</a>, 
-<a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347ac6db18e95c1d11cc265c03f90b10feac">YRMCDS_NOT_IMPLEMENTED</a>
+<a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347ac6db18e95c1d11cc265c03f90b10feac">YRMCDS_NOT_IMPLEMENTED</a>, 
+<a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a6251adb7fc8ab7da45df4f4aa65d644e">YRMCDS_IN_BINARY</a>, 
+<a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347aba152835f393a37f68be58b64203ccdb">YRMCDS_BAD_KEY</a>
 <br/>
  }</td></tr>
 <tr class="memdesc:a53c4b96a61747015310977bb52058347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library error numbers.  <a href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347">More...</a><br/></td></tr>
@@ -274,6 +278,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga07fae0924461ab86f3295ffdb0979ccf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347">yrmcds_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__yrmcds__functions_ga07fae0924461ab86f3295ffdb0979ccf.html#ga07fae0924461ab86f3295ffdb0979ccf">yrmcds_shutdown</a> (<a class="el" href="structyrmcds.html">yrmcds</a> *c)</td></tr>
 <tr class="memdesc:ga07fae0924461ab86f3295ffdb0979ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown the receiving end of the socket.  <a href="group__yrmcds__functions_ga07fae0924461ab86f3295ffdb0979ccf.html#ga07fae0924461ab86f3295ffdb0979ccf">More...</a><br/></td></tr>
 <tr class="separator:ga07fae0924461ab86f3295ffdb0979ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b05079271a93ebd52f98919d130eb41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347">yrmcds_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__yrmcds__functions_ga3b05079271a93ebd52f98919d130eb41.html#ga3b05079271a93ebd52f98919d130eb41">yrmcds_text_mode</a> (<a class="el" href="structyrmcds.html">yrmcds</a> *c)</td></tr>
+<tr class="memdesc:ga3b05079271a93ebd52f98919d130eb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on text protocol mode.  <a href="group__yrmcds__functions_ga3b05079271a93ebd52f98919d130eb41.html#ga3b05079271a93ebd52f98919d130eb41">More...</a><br/></td></tr>
+<tr class="separator:ga3b05079271a93ebd52f98919d130eb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0031a01d5b2d00b22b29f721f0774175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347">yrmcds_error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__yrmcds__functions_ga0031a01d5b2d00b22b29f721f0774175.html#ga0031a01d5b2d00b22b29f721f0774175">yrmcds_set_compression</a> (<a class="el" href="structyrmcds.html">yrmcds</a> *c, size_t threshold)</td></tr>
 <tr class="memdesc:ga0031a01d5b2d00b22b29f721f0774175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable/disable (de)compression for large objects.  <a href="group__yrmcds__functions_ga0031a01d5b2d00b22b29f721f0774175.html#ga0031a01d5b2d00b22b29f721f0774175">More...</a><br/></td></tr>
 <tr class="separator:ga0031a01d5b2d00b22b29f721f0774175"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,11 +422,11 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>libyrmcds public API. </p>
-<p>(C) 2013-2015 Cybozu. </p>
+<p>(C) 2013-2016 Cybozu. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 17 2016 19:30:36 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 18 2016 19:10:47 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

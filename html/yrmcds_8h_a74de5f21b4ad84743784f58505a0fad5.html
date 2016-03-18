@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -65,7 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,9 +84,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
    <td valign="top">
       <div class="navtab">
         <table>
+          <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a8a111fff2f5fc1fcb9ba134ede1faa4d.html#a8a111fff2f5fc1fcb9ba134ede1faa4d">LIBYRMCDS_VERSION</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="yrmcds_8h_a74de5f21b4ad84743784f58505a0fad5.html#a74de5f21b4ad84743784f58505a0fad5">LIBYRMCDS_VERSION_NUMBER</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga0264b42edb477e0ec4b7427833fe6082.html#ga0264b42edb477e0ec4b7427833fe6082">yrmcds_add</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_gadfa8d4a85bc2c6147a2b59de5bf7127a.html#gadfa8d4a85bc2c6147a2b59de5bf7127a">yrmcds_append</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a9c54c857645d642f3661251d4700d9ec">YRMCDS_BAD_ARGUMENT</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347aba152835f393a37f68be58b64203ccdb">YRMCDS_BAD_KEY</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga1b376474de427e5f0843eb7b9fe1ca37.html#ga1b376474de427e5f0843eb7b9fe1ca37">yrmcds_close</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__cnt__functions_ga8fcd3ff13091478a43ab838cd62a465a.html#ga8fcd3ff13091478a43ab838cd62a465a">yrmcds_cnt_acquire</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__cnt__functions_gaf6d16f9f36669aff792a8099b71f83a6.html#gaf6d16f9f36669aff792a8099b71f83a6">yrmcds_cnt_close</a></td></tr>
@@ -118,6 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga622173bad3efb503dd7698e8cc01aadd.html#ga622173bad3efb503dd7698e8cc01aadd">yrmcds_get_touch</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga67f9a5d2291ff1c420890eff95faa96d.html#ga67f9a5d2291ff1c420890eff95faa96d">yrmcds_getk</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_gaacf7f4e36b255643720f0b06d964286f.html#gaacf7f4e36b255643720f0b06d964286f">yrmcds_getk_touch</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a6251adb7fc8ab7da45df4f4aa65d644e">YRMCDS_IN_BINARY</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_gac94dc96202ee64fbdb9d1864ad004196.html#gac94dc96202ee64fbdb9d1864ad004196">yrmcds_incr</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga3de397d6a731492bca761ae0c0eae7a0.html#ga3de397d6a731492bca761ae0c0eae7a0">yrmcds_incr2</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga543d492c4f7750e748ebb4f24760cd1a.html#ga543d492c4f7750e748ebb4f24760cd1a">yrmcds_keys</a></td></tr>
@@ -144,8 +147,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga079ef73bb1e3a26015784f59d9a20937.html#ga079ef73bb1e3a26015784f59d9a20937">yrmcds_stat_settings</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga4e67e448a1cfb2ea249c44bb2fc74735.html#ga4e67e448a1cfb2ea249c44bb2fc74735">yrmcds_stat_sizes</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a077347146f4fdc68467fdc073fb266d4.html#a077347146f4fdc68467fdc073fb266d4">yrmcds_status</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a077347146f4fdc68467fdc073fb266d4.html#a077347146f4fdc68467fdc073fb266d4aa4b98e2803587a296ee3d15720489180">YRMCDS_STATUS_OTHER</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga6374501db953159c32cc46f2c7fdf32a.html#ga6374501db953159c32cc46f2c7fdf32a">yrmcds_strerror</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347a2fa90ea430e8e1114e5d407b9536224f">YRMCDS_SYSTEM_ERROR</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_ga3b05079271a93ebd52f98919d130eb41.html#ga3b05079271a93ebd52f98919d130eb41">yrmcds_text_mode</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="yrmcds_8h_a53c4b96a61747015310977bb52058347.html#a53c4b96a61747015310977bb52058347aac0fb4e737cb2ab65f9c1166fa274b58">YRMCDS_TIMEOUT</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_gac7f830faf489967477221000f988f256.html#gac7f830faf489967477221000f988f256">yrmcds_touch</a></td></tr>
           <tr><td class="navtab"><a class="qindex" href="group__yrmcds__functions_gac9be20ec254133e681c854f40bf398af.html#gac9be20ec254133e681c854f40bf398af">yrmcds_unlock</a></td></tr>
@@ -161,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 17 2016 19:30:36 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 18 2016 19:10:47 for libyrmcds by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
