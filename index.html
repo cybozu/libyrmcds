@@ -1,39 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>libyrmcds by cybozu</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>libyrmcds by cybozu</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>libyrmcds</h1>
-        <p>A memcached client library for C/C++.  Best suited to yrmcds.</p>
-        <p class="view"><a href="https://github.com/cybozu/libyrmcds">View the Project on GitHub <small>cybozu/libyrmcds</small></a></p>
-        <ul>
-          <li><a href="https://github.com/cybozu/libyrmcds/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/cybozu/libyrmcds/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/cybozu/libyrmcds">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>libyrmcds is a <a href="http://memcached.org/">memcached</a> client library written in C.<br>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>libyrmcds</h1>
+          <h2>A memcached client library for C/C++.  Best suited to yrmcds.</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/cybozu/libyrmcds/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/cybozu/libyrmcds/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/cybozu/libyrmcds" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>libyrmcds is a <a href="http://memcached.org/">memcached</a> client library written in C.<br>
 This is a companion to <a href="http://cybozu.github.io/yrmcds/">yrmcds</a>, a memcached compatible KVS.</p>
 
 <p>In addition to the library itself, a client program called <code>yc</code> is included.</p>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>
@@ -44,10 +48,11 @@ Instead, it can be used as a base library to implement such rich
 features.</p>
 </li>
 <li>
-<p>Only the binary protocol is supported.</p>
+<p>Designed for binary protocol.</p>
 
-<p>By supporting only the latest <a href="https://code.google.com/p/memcached/wiki/BinaryProtocolRevamped">binary protocol</a>, libyrmcds
-provides full access to the every aspect of the protocol.</p>
+<p>In order to access the true power of the binary protocol, libyrmcds
+is designed primarily for binary protocol.  Limited support for the
+text protocol is provided, though.</p>
 </li>
 <li>
 <p>Support for <a href="http://cybozu.github.io/yrmcds/">yrmcds</a> extensions.</p>
@@ -70,7 +75,7 @@ even use a different thread to receive results asynchronously.</p>
 </ul>
 
 <h2>
-<a id="documents" class="anchor" href="#documents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documents</h2>
+<a id="documents" class="anchor" href="#documents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documents</h2>
 
 <ul>
 <li><a href="https://github.com/cybozu/libyrmcds/blob/master/USAGE.md">Usage</a></li>
@@ -78,17 +83,17 @@ even use a different thread to receive results asynchronously.</p>
 </ul>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>This library is licensed under <a href="https://opensource.org/licenses/BSD-2-Clause">the BSD 2-clause license</a>.</p>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/cybozu">cybozu</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
+        </section>
+
+        <footer>
+          libyrmcds is maintained by <a href="https://github.com/cybozu">cybozu</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -99,5 +104,7 @@ even use a different thread to receive results asynchronously.</p>
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
