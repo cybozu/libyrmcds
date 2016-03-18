@@ -8,11 +8,11 @@
 #ifndef YRMCDS_H_INCLUDED
 #define YRMCDS_H_INCLUDED
 
-/// Library version string such as "1.2.1".
-#define LIBYRMCDS_VERSION        "1.2.1"
+/// Library version string such as "1.3.0".
+#define LIBYRMCDS_VERSION        "1.3.0"
 
 /// Library version number such as 10201.
-#define LIBYRMCDS_VERSION_NUMBER  10201
+#define LIBYRMCDS_VERSION_NUMBER  10300
 
 #include <pthread.h>
 #include <stddef.h>
