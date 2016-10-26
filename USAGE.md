@@ -93,7 +93,7 @@ request.
 
 ```c
 void async_recv(yrmcds* c, void (*notify)(uint32_t, yrmcds_response* r)) {
-    yrmcds_respone r;
+    yrmcds_response r;
     while( 1 ) {
         check_error( yrmcds_recv(&c, &r) );
         (*notify)(r.serial, &r);
