@@ -760,6 +760,15 @@ yrmcds_error yrmcds_stat_settings(yrmcds* c, uint32_t* serial);
 
 
 /**
+ * Send Stat command to obtain operations statistics.
+ * @param  c         A pointer to ::yrmcds.
+ * @param  serial    A pointer to \p uint32_t, or \p NULL.
+ * @return 0 if succeeded.  Other values indicate an error.
+ */
+yrmcds_error yrmcds_stat_ops(yrmcds* c, uint32_t* serial);
+
+
+/**
  * Send Stat command to obtain item statistics.
  * @param  c         A pointer to ::yrmcds.
  * @param  serial    A pointer to \p uint32_t, or \p NULL.

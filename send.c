@@ -503,6 +503,18 @@ yrmcds_error yrmcds_stat_settings(yrmcds* c, uint32_t* serial) {
                         0, serial, sizeof(key) - 1, key, 0, NULL, 0, NULL);
 }
 
+yrmcds_error yrmcds_stat_ops(yrmcds* c, uint32_t* serial) {
+    if( c == NULL )
+        return YRMCDS_BAD_ARGUMENT;
+
+    if( c->text_mode )
+        return YRMCDS_NOT_IMPLEMENTED;
+
+    const char key[] = "ops";
+    return send_command(c, YRMCDS_CMD_STAT,
+                        0, serial, sizeof(key) - 1, key, 0, NULL, 0, NULL);
+}
+
 yrmcds_error yrmcds_stat_items(yrmcds* c, uint32_t* serial) {
     if( c == NULL )
         return YRMCDS_BAD_ARGUMENT;
