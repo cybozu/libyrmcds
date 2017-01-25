@@ -82,7 +82,7 @@ static void usage() {
            "          this command has no effect.\n"
            "  flush [DELAY]\n"
            "          flush all unlocked items immediately or after DELAY seconds.\n"
-           "  stat [settings|items|sizes]\n"
+           "  stat [settings|ops|items|sizes]\n"
            "          obtain general or specified statistics.\n"
            "  keys [PREFIX]\n"
            "          dump keys matching PREFIX.\n"
@@ -899,6 +899,8 @@ int cmd_stat(int argc, char** argv, yrmcds* s) {
     if( argc > 0 ) {
         if( strcmp(argv[0], "settings") == 0 ) {
             e = yrmcds_stat_settings(s, &serial);
+        } else if( strcmp(argv[0], "ops") == 0 ) {
+            e = yrmcds_stat_ops(s, &serial);
         } else if( strcmp(argv[0], "items") == 0 ) {
             e = yrmcds_stat_items(s, &serial);
         } else if( strcmp(argv[0], "sizes") == 0 ) {
