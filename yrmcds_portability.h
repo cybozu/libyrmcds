@@ -29,7 +29,7 @@
 #  define le64toh(x) OSSwapLittleToHostInt64(x)
 #elif defined(__linux__)
 #  include <endian.h>
-#elif defined(sun) // Solaris
+#elif defined(__sun) || defined(__SRV4) // Solaris
 #  include <sys/byteorder.h>
 #  define htobe16(x) BE_16(x)
 #  define htole16(x) LE_16(x)
