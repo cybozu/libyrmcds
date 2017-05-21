@@ -97,8 +97,11 @@ recv_data(yrmcds_cnt* c) {
     if( (c->capacity - c->used) < RECV_SIZE ) {
         size_t new_capacity = c->capacity * 2;
         char* new_buffer = (char*)realloc(c->recvbuf, new_capacity);
-        if( new_buffer == NULL )
+        if( new_buffer == NULL ) {
+            free(c->recvbuf);
+            c->recvbuf = NULL;
             return YRMCDS_OUT_OF_MEMORY;
+        }
         c->recvbuf = new_buffer;
         c->capacity = new_capacity;
     }
@@ -126,8 +129,11 @@ append_stat(yrmcds_cnt_statistics* s,
             new_capacity = INITIAL_STATS_CAPACITY;
         yrmcds_cnt_stat* new_records =
             realloc(s->records, sizeof(yrmcds_cnt_stat) * new_capacity);
-        if( new_records == NULL )
+        if( new_records == NULL ) {
+            free(s->records);
+            s->records = NULL;
             return YRMCDS_OUT_OF_MEMORY;
+        }
         s->capacity = new_capacity;
         s->records = new_records;
     }
